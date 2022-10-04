@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="goal-styles.css" />
+        <link rel="stylesheet" href="goal-content-styles1.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="home-styles.css" />
+        <link rel="stylesheet" href="home-content-styles.css" />
+        <script src="goal.js"></script>
+
+
+        <title>Goals | GOGO Progress Tracker</title>
+    </head>
+
+    <body>
+      <img src="https://www.outsidebusinessjournal.com/wp-content/uploads/sites/27/2015/06/elliptigo-logo_white.jpg" class="logo" id="logo"> <h1 class="title-header">+ GOGO Progress Tracker</h1>
+
+        <hr class="header-line">
+        
+       
+      
+
+        <!-- Page Content -->
+        <div class="row">
+        
+          <div class="col">
+            <div class="leftside">
+              <div class="Lhead">Monthly ElliptiGO Goals</div>
+                <br>
+                <div class="G1">Ride 100 Miles
+                  <span style="float:right;">
+                    <button class="gbtn1" type="button" id="eg1" onclick="SetMonthlyGoal1()">Track Now!</button>
+                  </span>
+                </div>
+                <br>
+                <div class="G2">Ride 2500 ft Total Elevation
+                  <span style="float:right;">
+                    <button class="gbtn2" type="button" id="eg2" onclick="SetMonthlyGoal2()">Track Now!</button>
+                  </span>
+                </div>
+                <br>
+                <div class="G3">Single Ride of 30+ Miles
+                  <span style="float:right;">
+                    <button class="gbtn3" type="button" id="eg3" onclick="SetMonthlyGoal3()">Track Now!</button>
+                  </span>
+                </div>
+                <br>
+                <div class="G4">10 Days of Riding (Minimum of 2 Miles)
+                  <span style="float:right;">
+                    <button class="gbtn4" type="button" id="eg4" onclick="SetMonthlyGoal4()">Track Now!</button>
+                  </span>
+                </div>
+                <br>
+                <div class="G5">First 24.9 Miles Ridden
+                  <span style="float:right;">
+                    <button class="gbtn5" type="button" id="eg5" onclick="SetMonthlyGoal5()">Track Now!</button>
+                  </span>
+                </div>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="rightside">
+              <div class="Rhead">Set New Custom Goal</div>
+                <br>
+                <div class="DTE">
+                  <form>
+                    <input type="checkbox" name="C1" value="distance" id="D" onclick="DTE()"> Distance
+                    <input type="checkbox" name="C1" value="time" id="T" onclick="DTE()"> Time
+                    <input type="checkbox" name="C1" value="elevation" id="E" onclick="DTE()"> Elevation
+                  </form>
+                </div>
+                <br>
+                <div class="num">
+                  <label for="unit">Enter Number in Miles, Hours, or Feet:<br>
+                  <input type="number" id="unit" name="unit">
+                </div>
+                <br>
+                <div class="WMY">
+                  <form>
+                    <input type="checkbox" name="C3" value="week" id="W" onclick="WMY()"> Week
+                    <input type="checkbox" name="C3" value="month" id="M" onclick="WMY()"> Month
+                    <input type="checkbox" name="C3" value="year" id="Y" onclick="WMY()"> Year
+                  </form>
+                </div>
+                <br>
+                <div class="subCGoal">
+                  <button class="btn1" type="button" id="SCB" onclick="SetCGoal()">Set Goal!</button>
+                </div>
+                
+            </div>
+          </div>
+          
+        </div>
+        
+              
+              
+              
+              
+              
+        
+    </body>
+</html>

@@ -1,0 +1,208 @@
+body, html {
+    height: 100%;
+    
+}
+
+body {
+    background: rgb(255, 255, 255);
+    color: #212121;
+    padding: 0;
+    margin: 1% 0%;
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.8;
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+    word-wrap: break-word; 
+    position: absolute;
+    width: 70%;
+
+    
+}
+
+
+.title-header a{
+    color: #19506e;
+    font-size: 40px;
+    text-decoration: none;
+    margin-left: 2%;
+    margin-right: 2%;
+
+}
+
+.title-header a:hover {
+    color: #497189;
+}
+
+
+.topnav {
+    overflow: hidden;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.topnav a {
+    float: left;
+    color: #19506e;
+    text-align: center;
+    padding: 5px 32px 5px 0px; /*top right bottom left*/
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    
+}
+
+.topnav a:hover {
+    color: #497189;
+}
+
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('bike-image.png');
+    height: 34%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  
+.hero-text {
+    text-align: right;
+    color: white;
+    font-weight: 300;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -50%);
+
+}
+
+.row {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.page-content {
+    float: left;
+    width: 62%;
+    padding: 10px;
+  }
+.right-section {
+    float: right;
+    width: 30%;
+    padding: 20px 0px 20px 30px;
+    
+}
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    
+}
+
+.login-row {
+    box-sizing: border-box;
+
+
+}
+
+.login-column {
+    float: left;
+    width: 40%;
+}
+
+.login-row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.login-header {
+    color: #212121;
+    font-weight: 300;
+    font-size: 40px;
+    text-align: left;
+    margin-left: -30px;
+
+}
+
+.profile-picture {
+    margin: 20px 0px;
+    width: 80px;
+    height: 80px;
+    border: 1.5px solid black;
+    border-radius: 50%;
+}
+
+
+.login-form {
+
+    margin-bottom: 40px;
+    color: #212121;
+    font-weight: 400;
+
+}
+
+#login-input {
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #212121;
+}
+
+.button {
+    margin-top: 35px;
+    padding: 10px 60px;
+    cursor: pointer;
+    color: white;
+    background-color: #19506e;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #212121;
+}
+
+.button:hover {
+    background-color: #497189;
+}
+
+.divider {
+    margin-bottom: 40px;
+    margin-left: -30px;
+    height: 40px;
+    background-color: white;
+    border-style: none;
+
+}
+footer {
+    background-color :#f5f5f5;
+    width:149.5%; 
+    margin-left:-30%
+}
+
+footer .container {
+    padding: 80px 0px 30px 0px;
+    margin-left: 20%;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+
+/*---------------------- END OF TEMPLATE CODE ----------------------*/
+
+/* GLOBAL STYLES */
+
+p {
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    text-rendering: optimizeLegibility;
+
+}
+
+

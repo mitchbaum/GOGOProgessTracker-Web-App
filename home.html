@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="home-styles.css" />
+        <link rel="stylesheet" href="home-content-styles.css" />
+        <link rel="stylesheet" href="progress-bar.css" />
+        <script src="./main.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+        <title>GOGO Progress Tracker</title>
+        
+    </head>
+
+    <body>
+        <img src="https://www.outsidebusinessjournal.com/wp-content/uploads/sites/27/2015/06/elliptigo-logo_white.jpg" class="logo" id="logo"> <h1 class="title-header">+ GOGO Progress Tracker</h1>
+
+        <hr class="header-line">
+
+        <!-- Page Content -->
+        <div class="row">
+            <div class="page-content" style="/*display: none;*/ /*background-color:rgb(197, 195, 195);*/" id="page-content">
+              <p class="month-header">[ May Snapshot ]</p>
+              <h2 class="profile-login-name" id="profile-login-name">Hello, John</h2>
+              
+              <div style="text-align: right;">
+                <p class="goals-header">My Goals</p>
+              </div>
+
+              
+              
+              <div class="goals-button-container" id="goals-button-container">
+                <button class="goals-button-no-fill" onclick="window.location='goal.html'">Manage Goals</button><span class="expiration-label">Goals Expire 5/31/2022 </span>
+              </div>
+              
+              <!-- <p class="legend">Distance (miles) </p>
+              <progress value="35" max="100"></progress>
+              <span class="goal-rank">35/100 miles</span><br>
+
+              <p class="legend">Feet Climbed (feet) </p>
+              <progress value="4324" max="10000"></progress>
+              <span class="goal-rank">4,342/10,000 feet</span>
+
+              <p class="legend">Consecutive Ride Days </p>
+              <progress value="5" max="7"></progress>
+              <span class="goal-rank">5/7 days</span> -->
+              
+
+              <hr style="margin-top: 40px;">
+
+              <div class="awards-points-row">
+                <p class="header">GOGO Challenge for May</p>
+                <p id="may-eligibility" class="may-challenge-label"></p>
+                <p class="profile-login-name" id="may-challenge-label"></p>
+                <table>
+                  <tr>
+                    <th><p class="header" id="teammate-label">Teammate</p></th>
+                    <th><p class="header">Distance</p></th>
+                    <th><p class="header">Days</p></th>
+                  </tr>
+                  <tr>
+                    <td><p class="category-text" id="may-name"></p></td>
+                    <td><p class="category-text" id="may-distance"></p></td>
+                    <td><p class="category-text" id="may-days"></p></td>
+                  </tr>
+                  <tr>
+                    <td><p class="category-text" id="may-teammate-name"></p></td>
+                    <td><p class="category-text" id="may-teammate-distance"></p></td>
+                    <td id=""><p class="category-text" id="may-teammate-days"></p></td>
+                  </tr>
+                </table>
+                <div class="awards-column">
+                  <p class="header" id="may-team-points-label">Team Points</p>
+                  <h2 class="profile-login-name" id="may-team-points" style="display: inline;"></h2>
+                  <span style="display: inline;" id="may-team-points-max">/165</span>
+                </div>
+                <div class="points-column">
+                  <p class="header">My Points*</p>
+                  <h2 class="profile-login-name" id="may-my-points" style="display: inline;"></h2>
+                  <span style="display: inline;">/210 </span>
+                </div>
+              
+                
+              </div>
+
+              <p class="header">Calendar</p>
+
+              <table class="calendar-container">
+                <tr class="weekdays">
+                  <th>Sun</th>
+                  <th>Mon</th>
+                  <th>Tue</th>
+                  <th>Wed</th>
+                  <th>Thu</th>
+                  <th>Fri</th>
+                  <th>Sat</th>
+                </tr>
+                <tr class="days">
+                  <td id="1">1</td>
+                  <td id="2">2</td>
+                  <td id="3">3</td>
+                  <td id="4">4</td>
+                  <td id="5">5</td>
+                  <td id="6">6</td>
+                  <td id="7">7</td>
+                </tr>
+                <tr class="days">
+                  <td id="8">8</td>
+                  <td id="9">9</td>
+                  <td id="10">10</td>
+                  <td id="11">11</td>
+                  <td id="12">12</td>
+                  <td id="13">13</td>
+                  <td id="14">14</td>
+                </tr>
+                <tr class="days">
+                  <td id="15">15</td>
+                  <td id="16">16</td>
+                  <td id="17">17</td>
+                  <td id="18">18</td>
+                  <td id="19">19</td>
+                  <td id="20">20</td>
+                  <td id="21">21</td>
+                </tr>
+                <tr class="days">
+                  <td id="22">22</td>
+                  <td id="23">23</td>
+                  <td id="24">24</td>
+                  <td id="25">25</td>
+                  <td id="26">26</td>
+                  <td id="27">27</td>
+                  <td id="28">28</td>
+                </tr>
+                <tr class="days">
+                  <td id="29">29</td>
+                  <td id="30">30</td>
+                  <td id="31">31</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+            
+
+              </table>
+              
+
+              
+
+              <table>
+                <tr>
+                  <th><p class="header">Challenge</p></th>
+                  <th><p class="header">Points</p></th>
+                </tr>
+                <tr>
+                  <td><p class="category-text">Calendar days filled</p></td>
+                  <td><p class="category-text" id="calendar-days-filled"></p></td>
+                </tr>
+                <tr>
+                  <td><p class="category-text">Participate in a DUO</p></td>
+                  <td><p class="category-text" id="participate-in-duo"></p></td>
+                </tr>
+                <tr>
+                  <td><p class="category-text">Complete your calendar</p></td>
+                  <td><p class="category-text" id="complete-calendar"></p></td>
+                </tr>
+                <tr>
+                  <td><p class="category-text">EDIM bonus</p></td>
+                  <td><p class="category-text" id="edim-bonus"></p></td>
+                </tr>
+              </table>
+
+              <p><i>*A golden points label means you have completed your calendar.</i> </p>
+
+
+
+              
+
+              <div class="accordian-container">
+                <p class="header">GOGO 2022 Schedule</p>
+                <!-- MAY -->
+                <button class="accordion header">May: Complete The Calendar (and EDIM) (210 points maximum)</button>
+                <div class="panel">
+                  <p>Ride alone or participate as a DUO. As a DUO you will combine your daily mileage with that of your partner. GOGO will do the matchmaking. You might make a friend halfway around the world! If you’re up for it, ride Every Day In May (EDIM) and earn individual bonus points.</p>
+                  <p>Ride daily mileage equal to (or greater than) a numerical calendar day to fill in a calendar date. You do not have to complete calendar days in order: 1 mile on the 1st, 2 miles on the 2nd, 3 miles on the 3rd and so forth. Instead, fill your calendar in any order: If you GO 35 miles on May 1st, you’ll fill in the spot for May 31st. If you ride 20 miles on May 1st, you will fill in the date for May 20th. If you ride 20 miles again, you will fill in the largest unfilled number below 20: if May 19th and 18th are filled but the 17th is not, you’ll fill the May 17th slot.</p>
+                  <p>Helpful Hint: Ride big early and save the low mileage calendar days for last or for days when work/school/life necessitates quicker, low mileage rides.</p>
+                  <p>You earn 5 points for each calendar day filled in for a maximum of 155 calendar points. E.g. 31 days yields 155 points (31 x 5), while 20 days yields 100 (20 x 5). If you have a partner, you each earn the points.</p>
+                  <p>To be eligible for May points, a rider must ride at least 25 total miles during the month.</p>
+                  <p>Bonus point opportunities:</p>
+                  <ul style="list-style-position: outside;">
+                    <li style="list-style-type:circle;">participate in a DUO: 5 points</li>
+                    <li style="list-style-type:circle;">complete your calendar: 10 points</li>
+                    <li style="list-style-type:circle;">EDIM Bonus: Any rider who rides at least 1 mile each day of the month will earn bonus points based on total mileage as follows:</li>
+                    <ul>
+                      <li style="list-style-type:square;">496+ miles: 40 points</li>
+                      <li style="list-style-type:square;">248+ miles: 25 points</li>
+                      <li style="list-style-type:square;">62+ miles: 10 points</li>
+                    </ul>
+                  </ul>
+                </div>
+
+                <!-- APRIL -->
+                <button class="accordion header">April: GOmoji Around the World (195 points maximum)</button>
+                <div class="panel">
+                  <p>Individual Adventure (175 points maximum): Collect emoji in any quantity or combination you like.</p>
+                  <ul>
+                    <li style="list-style: none"><img draggable="false" class="emoji emojis-panel" alt="🛣" src="https://s.w.org/images/core/emoji/11/svg/1f6e3.svg"> (20 points): for each 100 total miles</li>
+                    <li style="list-style: none"><img draggable="false" class="emoji emojis-panel" alt="⛰" src="https://s.w.org/images/core/emoji/11/svg/26f0.svg"> (10 points): for every 2500 ft total elevation gain</li>
+                    <li style="list-style: none"><img draggable="false" class="emoji emojis-panel" alt="🚴" src="https://s.w.org/images/core/emoji/11/svg/1f6b4.svg"> (10 points): for each single ride of 30+ miles</li>
+                    <li style="list-style: none"><img draggable="false" class="emoji emojis-panel" alt="☀" src="https://s.w.org/images/core/emoji/11/svg/2600.svg"> (10 points): for every 10 days of riding (minimum of 2 miles is needed to count as a day of riding)</li>
+                    <li style="list-style: none"><img draggable="false" class="emoji emojis-panel" alt="🌐" src="https://s.w.org/images/core/emoji/11/svg/1f310.svg"> for the first 24.9 total miles ridden</li>
+                  </ul>
+                  <p>In addition, you may earn each of the following by posting a ride to Strava with the hashtag in the title along with a fitting photo. <b>Only one hashtag per ride, please.</b></p>
+                  <ul>
+                    <li style="list-style: none"><img draggable="false" class="emoji emojis-panel" alt="🌎" src="https://s.w.org/images/core/emoji/11/svg/1f30e.svg"> (5 points): #earth </li>
+                    <li style="list-style: none"><img draggable="false" class="emoji emojis-panel" alt="🌬" src="https://s.w.org/images/core/emoji/11/svg/1f32c.svg"> (5 points): #wind </li>
+                    <li style="list-style: none"><img draggable="false" class="emoji emojis-panel" alt="🔥" src="https://s.w.org/images/core/emoji/11/svg/1f525.svg"> (5 points): #fire</li>
+                    <li style="list-style: none"><img draggable="false" class="emoji emojis-panel" alt="🌊" src="https://s.w.org/images/core/emoji/11/svg/1f30a.svg"> (5 points): #water</li>
+                  </ul>
+                  <p>If you collect ALL nine emoji above you’ll also earn: <img draggable="false" class="emoji emojis-panel" alt="🏆" src="https://s.w.org/images/core/emoji/11/svg/1f3c6.svg"> (20 points)</p>
+                  <p>Group Adventure (20 points maximum): Let’s ride around the world for Earth Month. For every 24,901 mile circumnavigation of the globe by the group (up to two), individuals who have earned the <img draggable="false" class="emoji emojis-panel" alt="🌐" src="https://s.w.org/images/core/emoji/11/svg/1f310.svg"> emoji will get an additional 10 points.</p>
+                  <p>As an example, the leaderboard will display your individual emoji collection like this:
+                    <img draggable="false" class="emoji emojis-panel" alt="🌐" src="https://s.w.org/images/core/emoji/11/svg/1f310.svg"><img draggable="false" class="emoji emojis-panel" alt="🛣" src="https://s.w.org/images/core/emoji/11/svg/1f6e3.svg"><img draggable="false" class="emoji emojis-panel" alt="🛣" src="https://s.w.org/images/core/emoji/11/svg/1f6e3.svg"><img draggable="false" class="emoji emojis-panel" alt="🛣" src="https://s.w.org/images/core/emoji/11/svg/1f6e3.svg"><img draggable="false" class="emoji emojis-panel" alt="⛰" src="https://s.w.org/images/core/emoji/11/svg/26f0.svg"><img draggable="false" class="emoji emojis-panel" alt="⛰" src="https://s.w.org/images/core/emoji/11/svg/26f0.svg"><img draggable="false" class="emoji emojis-panel" alt="🚴" src="https://s.w.org/images/core/emoji/11/svg/1f6b4.svg"><img draggable="false" class="emoji emojis-panel" alt="🚴" src="https://s.w.org/images/core/emoji/11/svg/1f6b4.svg"><img draggable="false" class="emoji emojis-panel" alt="🌎" src="https://s.w.org/images/core/emoji/11/svg/1f30e.svg"><img draggable="false" class="emoji emojis-panel" alt="🌬" src="https://s.w.org/images/core/emoji/11/svg/1f32c.svg"><img draggable="false" class="emoji emojis-panel" alt="🔥" src="https://s.w.org/images/core/emoji/11/svg/1f525.svg"></p>
+                  <p>Properly measured trainer rides are permitted, but will be credited with no elevation. Credit for all manual entries (no GPS track outdoors, no speed sensor indoors) is limited to 5 miles per day.</p>
+                </div>
+
+                <!-- MARCH -->
+                <button class="accordion header">March: Get GOing (175 points maximum)</button>
+                <div class="panel">
+                  <p>First, earn 5 points for putting #points in the title of any Strava post between March 1st and March 6th. 
+                    (Why? This is “practice” for the new rule of using putting #points in ride titles for any official rides you do for extra GOGO points. 
+                    See the <a>rules page</a> for details.)</p>
+                  <p>Throughout the month, earn up to 170 riding points from the categories below based on your riding style, schedule, and weather.</p>
+                  <ul>
+                    <li>5 points for every 5 days of riding (minimum of 2 miles is needed to count as a day of riding)</li>
+                    <li>5 points for every 25 miles cumulative distance</li>
+                    <li>5 points for every 1500 feet cumulative elevation gain</li>
+                    <li>10 points for each single ride over 20 miles</li>
+                    <li>10 points for each single ride over 1500 feet of elevation gain</li>
+                  </ul>
+                  <p>Properly measured trainer rides are permitted, but will be credited with no elevation. Credit for all manual entries (no GPS track outdoors, no speed sensor indoors) is limited to 5 miles per day.</p>
+                </div>
+
+                <ul>
+                  <li><b>June:</b> Details TBA (185 points maximum)</li>
+                  <li><b>July:</b> Details TBA (225 points maximum)</li>
+                  <li><b>August:</b> Details TBA (180 points maximum)</li>
+                  <li><b>September:</b> Details TBA (240 points maximum)</li>
+                  <li><b>October:</b> Details TBA (135 points maximum)</li>
+                </ul>
+
+                
+              </div>
+
+
+              <div class="accordian-container" style="margin-bottom: 100px;">
+                <p class="header">My GOGO Archive</p>
+
+                <!-- APRIL 2022 -->
+                <button class="accordion header" id="april-archive-button">April 2022</button>
+                <div class="panel" style="background-color: white;">
+                  <div class="awards-points-row">
+                    <p class="header">GOGO Challenge for April</p>
+                    <table>
+                      <tr>
+                        <th class="awards-column"><p class="category-text">Group Distance</p></th>
+                        <td class="points-column"><p class="category-text" id="month-group-distance"></p></td>
+                      </tr>
+                      <tr>
+                        <th class="awards-column"><p class="category-text">My Distance</p></th>
+                        <td class="points-column"><p class="category-text" id="month-distance"></p></td>
+      
+                      </tr>
+                      <tr>
+                        <th class="awards-column"><p class="category-text">My Elevation</p></th>
+                        <td class="points-column"><p class="category-text" id="month-elevation"></p></td>
+                      </tr>
+    
+                    </table>
+                    <div class="awards-column april-awards">
+                      <p class="header">My Awards</p>
+                      <p id="my-awards" class="my-awards"></p>
+                      
+                    </div>
+                    <div class="points-column april-points">
+                      <p class="header">My Points*</p>
+                      <h2 class="profile-login-name" id="month-points" style="display: inline;">105</h2>
+                      <span style="display: inline;">/195 </span>
+                  
+                    </div>
+                  </div>
+    
+                  <table>
+                    <tr>
+                      <th><p class="header">Challenge</p></th>
+                      <th><p class="header">Points</p></th>
+                      <th><p class="header">Emojis Earned</p></th>
+                    </tr>
+                    <tr>
+                      <td><p class="category-text">Each 100 total miles</p></td>
+                      <td><p class="category-text" id="distance-points"></p></td>
+                      <td id="distance"></td>
+                    </tr>
+                    <tr>
+                      <td><p class="category-text">Every 2,500 feet total elevation</p></td>
+                      <td><p class="category-text" id="elevation-points"></p></td>
+                      <td id="elevation"></td>
+                    </tr>
+                    <tr>
+                      <td><p class="category-text">Each single ride of 30+ miles</p></td>
+                      <td><p class="category-text" id="bike-points"></p></td>
+                      <td id="bike"></td>
+                    </tr>
+                    <tr>
+                      <td><p class="category-text">Every 10 days of riding (min. 2 miles)</p></td>
+                      <td><p class="category-text" id="sun-points"></p></td>
+                      <td id="sun"></td>
+                    </tr>
+                    <tr>
+                      <td><p class="category-text">Qualified for the Group Adventure</p></td>
+                      <td><p class="category-text"></p></td>
+                      <td id="globe"></td>
+                    </tr>
+                    <tr>
+                      <td><p class="category-text">#earth</p></td>
+                      <td><p class="category-text" id="earth-points"></p></td>
+                      <td id="earth"></td>
+    
+                    </tr>
+                    <tr>
+                      <td><p class="category-text">#wind</p></td>
+                      <td><p class="category-text" id="wind-points"></p></td>
+                      <td id="wind"></td>
+                    </tr>
+                    <tr>
+                      <td><p class="category-text">#fire</p></td>
+                      <td><p class="category-text" id="fire-points">0</p></td>
+                      <td id="fire"></td>
+                    </tr>
+                    <tr>
+                      <td><p class="category-text">#water</p></td>
+                      <td><p class="category-text" id= "water-points">0</p></td>
+                      <td id="water"></td>
+                    </tr>
+                  </table>
+                  <p><i>*A golden points label means you have earned all 9 emojis.</i> </p>
+                
+                  
+                  
+                </div>
+
+
+                <!-- MARCH 2022 -->
+                <button class="accordion header">March 2022</button>
+                <div class="panel" style="background-color: white;">
+                  <p class="header">GOGO Challenge for March</p>
+              <table>
+                <tr>
+                  <th class="awards-column"><p class="category-text">My Distance</p></th>
+                  <td class="points-column"><p class="category-text" id="march-distance"></p></td>
+                </tr>
+                <tr>
+                  <th class="awards-column"><p class="category-text">My Elevation</p></th>
+                  <td class="points-column"><p class="category-text" id="march-elevation"></p></td>
+                </tr>
+              </table>
+              <div class="awards-column">
+                <p class="header">My Points*</p>
+                <h2 class="profile-login-name" id="march-total-points" style="display: inline;"></h2>
+                <span style="display: inline;">/175 </span>
+              </div>
+              <table>
+                <tr>
+                  <th><p class="header">Challenge</p></th>
+                  <th><p class="header">Points</p></th>
+                </tr>
+                <tr>
+                  <td><p class="category-text">Every 5 days of riding</p></td>
+                  <td><p class="category-text" id="march-days-points"></p></td>
+                </tr>
+                <tr>
+                  <td><p class="category-text">Every 25 miles distance</p></td>
+                  <td><p class="category-text" id="march-distance-points"></p></td>
+                </tr>
+                <tr>
+                  <td><p class="category-text">Every 1,500 feet elevation gain</p></td>
+                  <td><p class="category-text" id="march-elevation-gain-points"></p></td>
+                </tr>
+                <tr>
+                  <td><p class="category-text">Each single ride of 20+ miles</p></td>
+                  <td><p class="category-text" id="march-20ride-points"></p></td>
+                </tr>
+                <tr>
+                  <td><p class="category-text">Each single ride over 1,500 feet elevation gain</p></td>
+                  <td><p class="category-text" id="march-1500elevation-points"></p></td>
+                </tr>
+                <tr>
+                  <td><p class="category-text">#points</p></td>
+                  <td><p class="category-text" id="march-hashtag"></p></td>
+                </tr>
+              </table>
+              <p><i>*A golden points label means you have completed all challenges.</i> </p>
+
+
+                </div>
+
+
+
+
+              </div>
+
+
+
+              
+              
+
+
+              
+            </div>
+        
+            
+            <!-- Right section where login is placed -->
+            <div class="right-section" style="background-color:#f5f5f5;">
+              <div id="login-section"> 
+                <div class="login-row">
+                  <div class="login-column">
+                    <img class="profile-picture" src="account-icon.png">
+
+                  </div>
+                  <div class="login-column">
+                    <h2 class="login-header">Login</h2>
+                    
+                  </div>
+                  
+
+                </div>
+                <div class="login-form">
+                  <label for="login-input">GOGO Id Number:</label>&nbsp;&nbsp;&nbsp;
+                  <input type="text" id="initial-login-input" name="login-form"><br>
+                  <p class="error-message" id="login-error-message">Error message.</p>
+                  <button class="button" id="login-button">Login</button>
+                </div>
+                <hr class="divider" >
+                <p class="achievements-header"> 
+                  Enter your GOGO id number to see statistics 
+                </p>
+              </div>
+
+
+
+              <div class="profile-content" id="profile-content">
+
+                
+                  
+                    <div class="login-column-picture" >
+                      <img class="profile-picture" style="object-fit: cover;" id="profile-picture">
+                    </div>
+                    <div class="login-column-name" >
+                      <h2 class="profile-login-name profile-name-responsive" id="name">Mac Majsjdsjj</h2>
+                      <p class="profile-info" id="profile-info">Id Number: 3499</p>
+                      
+                    </div>
+
+                    <hr class="divider">
+                    
+
+                
+                <p class="header">My All Time Achievements</p>
+                <fieldset id="distance-fieldset">
+                  <legend id="distance-legend">Lifetime Distance</legend>
+                  <div>
+                    <p style="font-weight: bold; display: inline;" id="distance-club-label"></p><p style="display: inline;" id="distance-rank"></p><br>
+  
+                  </div>
+                  <p class="fieldset-distance-label" id="lifetime-distance"></p>
+                  <button class="fieldset-button" id="distance-button">Go to Leaderboard</button>
+                  
+        
+                </fieldset>
+                <fieldset id="elevation-fieldset">
+                  <legend id="elevation-legend">Lifetime Elevation</legend>
+                  <div>
+                    <p style="font-weight: bold; display: inline;" id="elevation-club-label"></p><p style="display: inline;" id="elevation-rank"></p><br>
+  
+                  </div>
+                  <p class="fieldset-distance-label" id="lifetime-elevation"></p>
+                  <button class="fieldset-button" id="elevation-button">Go to Leaderboard</button>
+                  
+        
+                </fieldset>
+                <fieldset id="century-fieldset">
+                  <legend id="century-legend">Century Rides</legend>
+                  <div>
+                    <p class="fieldset-club-label" style="font-weight: bold; display: inline;" id="centuries-club-label"></p><p style="display: inline;" id="centuries-rank"></p><br>
+  
+                  </div>
+                  <p class="fieldset-distance-label" id="centuries"></p>
+                  <button class="fieldset-button" id="century-button">Go to Leaderboard</button>
+        
+                </fieldset>
+                <fieldset id="points-fieldset">
+                  <legend id="points-legend">GOGO Points in 2022</legend>
+                  <div>
+                    <p style="display: inline;" id="points-rank"></p><br>
+  
+                  </div>
+                  <p class="fieldset-distance-label" id="points"></p>
+        
+                </fieldset>
+
+                <div class="rank-set-button-container">
+                  
+  
+                  <button class="button-no-fill" onclick="window.location='goal.html'">Set New Goal</button>
+
+                </div>
+  
+
+              
+              
+          
+
+              
+                <hr class="divider">
+                  <div class="login-row">
+                    <div class="login-column" style="width: auto;">
+                      <h2 class="new-login-header">Search for Another ID</h2>
+                      
+                    </div>
+                
+                  </div>
+
+                  <div class="login-form">
+                    <label for="login-input">GOGO Id Number:</label>&nbsp;&nbsp;&nbsp;
+                    <input type="text" id="another-login-input" name="login-form"><br>
+                    <p class="error-message" id="another-error-message">Error message.</p>
+                    <button class="button" id="login-button">Search</button>
+                  </div>
+                </div>
+
+              </div>
+
+              
+            
+          </div>
+      
+
+          
+
+    </body>
+    
+</html>

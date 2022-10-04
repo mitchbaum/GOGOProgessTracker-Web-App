@@ -1,0 +1,265 @@
+body, html {
+    height: 100%;
+    
+}
+
+body {
+    background: rgb(255, 255, 255);
+    color: #212121;
+    padding: 0;
+    margin: 1% 12%;
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.8;
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+    word-wrap: break-word; 
+    position: absolute;
+
+    
+}
+
+.logo {
+    height: auto;
+    width: 450px;
+    vertical-align: middle;
+}
+
+.title-header{
+    color: #121212;
+    font-size: 40px;
+    text-decoration: none;
+    margin-left: 1%;
+
+    display: inline;
+    vertical-align: middle;
+
+}
+
+.header-line {
+    margin-bottom: 40px;
+
+    height: 5px;
+    background-color: #121212;
+    border-style: none;
+
+}
+
+
+
+
+
+.row {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.page-content {
+    float: left;
+    width: 62%;
+    padding: 0px;
+    visibility: hidden;
+  }
+.right-section {
+    float: right;
+    width: 30%;
+    padding: 20px 0px 20px 30px;
+    
+}
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    
+}
+
+.login-row {
+    box-sizing: border-box;
+
+
+}
+.login-column-picture {
+    float: left;
+    width: 30%;
+}
+.login-column-name {
+    float: left;
+    width: 70%;
+}
+
+.login-column {
+    float: left;
+    width: 40%;
+}
+
+.login-row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.login-header {
+    color: #212121;
+    font-weight: 300;
+    font-size: 40px;
+    text-align: left;
+    margin-left: -50px;
+
+}
+
+.profile-picture {
+    margin: 20px 0px;
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+
+.login-form {
+
+    margin-bottom: 40px;
+    color: #212121;
+    font-weight: 400;
+
+}
+
+#initial-login-input, #another-login-input {
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #212121;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    visibility: hidden;
+
+
+}
+
+.button {
+    padding: 10px 60px;
+    cursor: pointer;
+    color: white;
+    background-color: #19506e;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #212121;
+    
+}
+
+
+.button:hover {
+    background-color: #497189;
+}
+
+.divider {
+    margin-bottom: 40px;
+    margin-left: -30px;
+    height: 40px;
+    background-color: white;
+    border-style: none;
+
+}
+
+
+@media only screen and (max-width: 700px) {
+    body, html {
+        width: 100%;
+    }
+
+    body {
+        margin: 0px;
+    }
+
+    .logo {
+        width: 80%;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+    
+    .title-header{
+        font-size: 25px;
+        margin-left: 60px;
+    
+    }
+    .header-line {
+        height: 2px;
+    
+    }
+    .page-content {
+        width: 100%;
+        margin: 0;
+        display: none;
+        visibility: hidden;
+
+      }
+    .right-section {
+        width: 100%;
+        padding: 20px 0px 20px 0px;
+        
+    }
+
+    .login-column {
+        margin-left: 30px;
+    }
+
+    /* small screen profile picture and name*/ 
+    .login-column-picture {
+        width: 20%;
+        margin-left: 30px;
+    }
+    .login-column-name {
+        width: 60%;
+        margin-left: 30px;
+    }
+
+    .login-header {
+        text-align: left;
+        margin-left: -70px;
+    
+    }
+    .login-form {
+        margin-left: 30px;
+    
+    }
+    .achievements-header {
+        margin-left: 10px;
+    }
+
+    
+
+    
+      
+
+    
+}
+
+/*---------------------- END OF TEMPLATE CODE ----------------------*/
+
+/* GLOBAL STYLES */
+
+p {
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    text-rendering: optimizeLegibility;
+
+}
+
+a {
+    color: #39BAF3;
+    text-decoration: none;
+    line-height: inherit;
+    font-weight: bold;
+}
+
+
+
