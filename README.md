@@ -42,4 +42,4 @@ Login with ID 5, 25, or 33 for real user examples
 
 
 # Things To Note
-- The data on this application is OLD because the database has not been updated with new data from the riders since May 2022
+- The data on this application are OLD because the database has not been updated with new data from the riders since May 2022
